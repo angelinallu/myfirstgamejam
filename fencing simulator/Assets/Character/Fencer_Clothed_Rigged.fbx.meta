@@ -4,8 +4,29 @@ ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
   - first:
-      74: -4665137740772374578
-    second: Fencer_rig|Action
+      74: 3036959876776003958
+    second: Fencer_rig|Cut_Head
+  - first:
+      74: -7079617374533657958
+    second: Fencer_rig|Cut_head.001
+  - first:
+      74: -7077289823036268772
+    second: Fencer_rig|Cut_mid
+  - first:
+      74: 7447472371589287378
+    second: Fencer_rig|Cut_head
+  - first:
+      74: 7810137874128109135
+    second: Fencer_rig|Duck_parry_5
+  - first:
+      74: 9080556608122990956
+    second: Fencer_rig|Duck_parry_5.001
+  - first:
+      74: -3548686909888566168
+    second: Fencer_rig|Duck_parry_5.002
+  - first:
+      74: -4450651417965138507
+    second: Fencer_rig|Jump_parry_2
   - first:
       74: -5087075065076388694
     second: Fencer_rig|PoseLib
@@ -44,11 +65,98 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Fencer_rig|Action
-      takeName: Fencer_rig|Action
-      internalID: -4665137740772374578
+      name: Fencer_rig|Cut_mid
+      takeName: Fencer_rig|Cut_mid
+      internalID: -7077289823036268772
       firstFrame: 0
-      lastFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Fencer_rig|Cut_head
+      takeName: Fencer_rig|Cut_head
+      internalID: 7447472371589287378
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Fencer_rig|Duck_parry_5
+      takeName: Fencer_rig|Duck_parry_5
+      internalID: 7810137874128109135
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Fencer_rig|Jump_parry_2
+      takeName: Fencer_rig|Jump_parry_2
+      internalID: -4450651417965138507
+      firstFrame: 0
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -77,7 +185,7 @@ ModelImporter:
       takeName: Fencer_rig|PoseLib
       internalID: -5087075065076388694
       firstFrame: 0
-      lastFrame: 3
+      lastFrame: 4
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -106,7 +214,7 @@ ModelImporter:
       takeName: Fencer_rig|Step_backward
       internalID: -5899327684163414052
       firstFrame: 0
-      lastFrame: 30
+      lastFrame: 20
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
