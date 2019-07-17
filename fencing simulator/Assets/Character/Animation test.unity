@@ -120,6 +120,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &95119340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 7a216f5483df7dc4e84cac99942c3d73,
+    type: 3}
+  m_PrefabInstance: {fileID: 113400723}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &95119343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95119340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d5e98f4add044148a6eaf38ffcee021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &113400723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -131,6 +149,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fencer_Clothed_Rigged
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 7a216f5483df7dc4e84cac99942c3d73,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4d9a634b78cfa4c588048fd3e576e16a, type: 2}
+    - target: {fileID: -6057140222963153312, guid: 7a216f5483df7dc4e84cac99942c3d73,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 7a216f5483df7dc4e84cac99942c3d73,
         type: 3}
@@ -265,12 +293,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260641925}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.86, z: -2.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1270615795
 GameObject:
@@ -361,5 +389,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
