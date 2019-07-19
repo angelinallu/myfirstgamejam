@@ -28,14 +28,31 @@ public class CharacterController : MonoBehaviour
         characterAnimator.SetBool(forwardHash, Input.GetButton("forward"));
         characterAnimator.SetBool(backHash, Input.GetButton("back"));
 
-        if (Input.GetButtonDown("torso cut"))
+        int animLayer = characterAnimator.GetLayerIndex("Base Layer");
+        AnimatorStateInfo stateInfo = characterAnimator.GetCurrentAnimatorStateInfo(animLayer);
+        if (stateInfo.IsName("Base Layer.Step_forward") || stateInfo.IsName("Base Layer.Step_backward"))
         {
-            characterAnimator.SetTrigger(midActionHash);
+            if (characterAnimator.GetBool(forwardHash))
+            {
+                transform.Translate(Vector3.forward * 0.75f * Time.deltaTime);
+            }
+            else if (characterAnimator.GetBool(backHash))
+            {
+                transform.Translate(Vector3.back * 0.75f * Time.deltaTime);
+            }
         }
 
-        if (Input.GetButtonDown("head cut"))
+        if (!(stateInfo.IsName("Base Layer.Cut_head") || stateInfo.IsName("Base Layer.Cut_mid") || stateInfo.IsName("Base Layer.Duck_parry_5") || stateInfo.IsName("Base Layer.Jump_parry_2")))
         {
-            characterAnimator.SetTrigger(highActionHash);
+            if (Input.GetButtonDown("torso cut"))
+            {
+                characterAnimator.SetTrigger(midActionHash);
+            }
+
+            if (Input.GetButtonDown("head cut"))
+            {
+                characterAnimator.SetTrigger(highActionHash);
+            }
         }
     }
 }
