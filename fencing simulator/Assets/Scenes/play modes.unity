@@ -1453,9 +1453,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1583281240}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6be719136ec045699d9e047072211ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 397512c92a8404ed792641661529d696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 0}
+  destination: menu
 --- !u!114 &1583281242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1500,7 +1502,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1583281241}
-        m_MethodName: mainMenu
+        m_MethodName: Clicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

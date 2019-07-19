@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 2766782}
   - component: {fileID: 2766781}
   - component: {fileID: 2766780}
-  - component: {fileID: 2766783}
   - component: {fileID: 2766784}
   m_Layer: 5
   m_Name: settings
@@ -205,7 +204,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2766784}
-        m_MethodName: Settings
+        m_MethodName: Clicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -254,18 +253,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2766778}
   m_CullTransparentMesh: 0
---- !u!114 &2766783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2766778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2766784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,6 +265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397512c92a8404ed792641661529d696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 0}
+  destination: settings
 --- !u!1 &29550963
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,7 +738,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 867397343}
-        m_MethodName: HighScores
+        m_MethodName: Clicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -810,6 +799,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397512c92a8404ed792641661529d696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 0}
+  destination: high scores
 --- !u!1 &995310852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,7 +1010,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1032378560}
-        m_MethodName: Tutorial
+        m_MethodName: Clicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1080,6 +1071,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397512c92a8404ed792641661529d696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 1032378557}
+  destination: tutorial
 --- !u!1 &1163354840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,6 +1218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397512c92a8404ed792641661529d696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 0}
+  destination: 
 --- !u!1 &1193395956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,6 +1391,7 @@ GameObject:
   - component: {fileID: 1261213021}
   - component: {fileID: 1261213020}
   - component: {fileID: 1261213023}
+  - component: {fileID: 1261213024}
   m_Layer: 5
   m_Name: play
   m_TagString: Untagged
@@ -1467,7 +1463,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1261213023}
-        m_MethodName: Play
+        m_MethodName: Clicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1528,6 +1524,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397512c92a8404ed792641661529d696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 0}
+  destination: play modes
+--- !u!114 &1261213024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261213018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 397512c92a8404ed792641661529d696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 0}
+  destination: 
 --- !u!1 &1299025910
 GameObject:
   m_ObjectHideFlags: 0
@@ -2259,7 +2271,7 @@ RectTransform:
   m_Father: {fileID: 995310856}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.05, y: 0}
+  m_AnchorMin: {x: 0.01, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -2361,7 +2373,7 @@ MonoBehaviour:
     spaceCount: 5
     wordCount: 6
     linkCount: 0
-    lineCount: 3
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -2629,7 +2641,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2111063881}
-        m_MethodName: Credits
+        m_MethodName: Clicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2690,3 +2702,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397512c92a8404ed792641661529d696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 0}
+  destination: credits
