@@ -721,7 +721,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 52.45
+  m_fontSize: 52.3
   m_fontSizeBase: 10.88
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -970,6 +970,7 @@ GameObject:
   - component: {fileID: 885218373}
   - component: {fileID: 885218372}
   - component: {fileID: 885218371}
+  - component: {fileID: 885218374}
   m_Layer: 5
   m_Name: bout
   m_TagString: Untagged
@@ -1039,7 +1040,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 885218372}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 885218374}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &885218372
@@ -1079,6 +1091,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885218369}
   m_CullTransparentMesh: 0
+--- !u!114 &885218374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885218369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 397512c92a8404ed792641661529d696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 885218371}
+  destination: local 2 player
 --- !u!1 &1098804509
 GameObject:
   m_ObjectHideFlags: 0

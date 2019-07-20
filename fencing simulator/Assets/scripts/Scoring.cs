@@ -1,46 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Scoring : MonoBehaviour
 {
-    private int opponent;
-    private int player;
-    private int point;
-    private int rightOfWay;
-    private int attacking;
-    private int missed;
-    private int parried;
-    private int hit;
-
-    private bool ongoing;
+    private int playerScore = 0;
+    private TextMeshProUGUI text;
 
     // Start is called before the first frame update
     void Start()
     {
-        point = 0;
-        ongoing = true;
-        rightOfWay = 0;
-        attacking = 0;
-        missed = 0;
-        parried = 0;
-        hit = 0;
+        playerScore = 0;
+        text = GetComponent<TextMeshProUGUI>();
+        text.text = playerScore.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddPoint()
     {
-        while (ongoing)
+        playerScore++;
+        text.text = playerScore.ToString();
+        if (playerScore >= 15)
         {
-            if (point == -1 && opponent < 15)
-            {
-                opponent++;
-            }
-            else if (point == 1 && player < 15)
-            {
-                player++;
-            }
-            ongoing &= opponent != 15 && player != 15;
+            //You win!
+            SceneManager.LoadScene("menu");
         }
     }
 }

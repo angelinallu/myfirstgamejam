@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
+    public string playerID = "p1";
+
     private Animator characterAnimator;
-    private int movementHash;
     private int forwardHash;
     private int backHash;
     private int midActionHash;
@@ -14,7 +15,6 @@ public class CharacterController : MonoBehaviour
     void Start()
     {
         characterAnimator = GetComponent<Animator>();
-        movementHash = Animator.StringToHash("Movement");
         midActionHash = Animator.StringToHash("MidAction");
         highActionHash = Animator.StringToHash("HighAction");
         forwardHash = Animator.StringToHash("ForwardPressed");
@@ -23,10 +23,8 @@ public class CharacterController : MonoBehaviour
     
     void Update()
     {
-        characterAnimator.SetFloat(movementHash, Input.GetAxis("Vertical"));
-
-        characterAnimator.SetBool(forwardHash, Input.GetButton("forward"));
-        characterAnimator.SetBool(backHash, Input.GetButton("back"));
+        characterAnimator.SetBool(forwardHash, Input.GetButton(playerID + "forward"));
+        characterAnimator.SetBool(backHash, Input.GetButton(playerID + "back"));
 
         int animLayer = characterAnimator.GetLayerIndex("Base Layer");
         AnimatorStateInfo stateInfo = characterAnimator.GetCurrentAnimatorStateInfo(animLayer);
@@ -44,12 +42,12 @@ public class CharacterController : MonoBehaviour
 
         if (!(stateInfo.IsName("Base Layer.Cut_head") || stateInfo.IsName("Base Layer.Cut_mid") || stateInfo.IsName("Base Layer.Duck_parry_5") || stateInfo.IsName("Base Layer.Jump_parry_2")))
         {
-            if (Input.GetButtonDown("torso cut"))
+            if (Input.GetButtonDown(playerID + "midcut"))
             {
                 characterAnimator.SetTrigger(midActionHash);
             }
 
-            if (Input.GetButtonDown("head cut"))
+            if (Input.GetButtonDown(playerID + "highcut"))
             {
                 characterAnimator.SetTrigger(highActionHash);
             }
